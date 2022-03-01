@@ -79,7 +79,7 @@ console.log(sum(mixedArr));
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
-const numbers = [2, 6, 9, 10, 7, 4, 1, 9];
+const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 function findAverage(lista) {
   let media = 0;
   let suma = 0;
@@ -89,13 +89,24 @@ function findAverage(lista) {
   media = suma / lista.length;
   console.log(media);
 }
-findAverage(numbers);
+findAverage(numbers2);
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(lista) {
+  let media = 0;
+  let suma = 0;
+  lista.forEach((palabra) => {
+    suma += palabra.length;
+  });
+  media = suma / lista.length;
+  console.log(media);
+  return media;
+}
+averageWordLength(wordsArr);
+
 
 // Bonus - Iteration #4.1
 function avg() { }
@@ -116,16 +127,19 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray(arrat) {
+function uniquifyArray(array) {
   let newArray = [];
-  array.forEach(element => {
+  array.forEach((element) => {
     if (newArray.includes(element)) {
-      console.log('El elemento ${element} ya esta incluido');
     } else {
-      newArray
+      newArray.push(element);
     }
-  })
+  });
+  return newArray;
 }
+console.log(uniquifyArray(wordsUnique))
+
+
 
 
 
