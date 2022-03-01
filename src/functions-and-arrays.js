@@ -10,7 +10,6 @@ function maxOfTwoNumbers(num1, num2) {
   return;
 }
 
-maxOfTwoNumbers(12, 20)
 
 
 // Iteration #2: Find longest word
@@ -32,20 +31,18 @@ function findLongestWord(array) {
   return word;
 }
 
-console.log(findLongestWord(words))
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 function sumNumbers(lista) {
-  // For normal
   let suma = 0;
   for (let i = 0; i < lista.length; i++) {
     suma += lista[i];
   }
   return suma;
 }
-console.log(sumNumbers(numbers));
+
 
 // Iteration #3.1 Bonus:
 const mixedArr = [6, 12, "miami", 1, true, "barca", "200", "lisboa", 8, 10];
@@ -146,9 +143,13 @@ console.log(uniquifyArray(wordsUnique))
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() { }
-
-
+function doesWordExist(wordsFind, word) {
+  if (wordsFind.includes(word)) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -165,8 +166,18 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() { }
-
+function howManyTimes(wordsCount, word) {
+  if (!wordsCount.length) {
+    return false;
+  }
+  var counter = 0;
+  for (var i = 0; i < wordsCount.length; i++) {
+    if (word === wordsCount[i]) {
+      counter += 1;
+    }
+  }
+  return counter;
+}
 
 
 // Iteration #8: Bonus
